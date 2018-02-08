@@ -68,7 +68,7 @@ vector<cd> invfft(vector<cd>&a)         ///last step of inverse fft
     int n=a.size();
     for(int i=0;i<n;i++)
     {
-        a[i]=a[i]/cd(ns );
+        a[i]=a[i]/cd(n);
     }
     return a;
 }
@@ -78,7 +78,6 @@ vector<cd> mulfft(vector<cd>&a)         ///doubles the quantity of terms by addi
     for(int i=0;i<n;i++)
     {
         a.push_back(0);
-        cout<<"a"<<endl;
     }
     return fft(a);
 }
